@@ -813,82 +813,6 @@
             color: var(--accent);
         }
 
-        /* ========== POLICY / TERMS PAGES (MODAL-LIKE) ========== */
-        .legal-page {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0, 0, 0, 0.6);
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .legal-page.active {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 30px 16px;
-        }
-        .legal-container {
-            background: #fff;
-            max-width: 800px;
-            width: 100%;
-            border-radius: var(--radius-lg);
-            padding: 36px 28px;
-            position: relative;
-            box-shadow: var(--shadow-lg);
-            margin: auto;
-        }
-        .legal-close {
-            position: sticky;
-            top: 10px;
-            float: right;
-            background: var(--gray-200);
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--gray-700);
-            transition: var(--transition);
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .legal-close:hover {
-            background: #e74c3c;
-            color: #fff;
-        }
-        .legal-container h2 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            color: var(--gray-900);
-        }
-        .legal-container .legal-date {
-            font-size: 0.8rem;
-            color: var(--gray-600);
-            margin-bottom: 20px;
-        }
-        .legal-container h3 {
-            font-size: 1.1rem;
-            margin: 20px 0 8px;
-            color: var(--gray-900);
-        }
-        .legal-container p,
-        .legal-container li {
-            font-size: 0.9rem;
-            color: var(--gray-700);
-            line-height: 1.7;
-            margin-bottom: 8px;
-        }
-        .legal-container ul {
-            padding-left: 20px;
-            margin-bottom: 12px;
-        }
-
         /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
             .hero-inner {
@@ -972,9 +896,6 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 8px;
-            }
-            .legal-container {
-                padding: 20px 14px;
             }
         }
     </style>
@@ -1326,7 +1247,7 @@
                         </div>
                         <button type="submit" class="btn-primary" style="width:100%;justify-content:center;cursor:pointer;">Enviar Mensagem</button>
                     </form>
-                    <p class="form-disclaimer">Este formulário não cria vínculo contratual. Seus dados serão utilizados apenas para retorno do contato, conforme nossa Política de Privacidade.</p>
+                    <p class="form-disclaimer">Este formulário não cria vínculo contratual. Seus dados serão utilizados apenas para retorno do contato, conforme nossa <a href="politica-de-privacidade.html" style="color:var(--accent);">Política de Privacidade</a>.</p>
                 </div>
             </div>
         </div>
@@ -1353,103 +1274,18 @@
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
-                <a href="#politica-privacidade" class="open-legal" data-legal="politica">Política de Privacidade</a>
-                <a href="#termos-uso" class="open-legal" data-legal="termos">Termos de Uso</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="termos-de-uso.html">Termos de Uso</a>
             </div>
         </div>
         <div class="footer-bottom">
             <span>© 2016 - 2026 Jetspeed · G C de Sousa Junior Multimidia. Todos os direitos reservados.</span>
             <span>
-                <a href="#politica-privacidade" class="open-legal" data-legal="politica">Política de Privacidade</a>
-                <a href="#termos-uso" class="open-legal" data-legal="termos">Termos de Uso</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="termos-de-uso.html">Termos de Uso</a>
             </span>
         </div>
     </footer>
-
-    <!-- ==================== POLÍTICA DE PRIVACIDADE (OVERLAY) ==================== -->
-    <div class="legal-page" id="legalPolitica">
-        <div class="legal-container">
-            <button class="legal-close" onclick="closeLegal('legalPolitica')" aria-label="Fechar">✕</button>
-            <h2>Política de Privacidade</h2>
-            <p class="legal-date">Última atualização: 26 de maio de 2026</p>
-            <p>A <strong>Jetspeed</strong>, razão social <strong>G C de Sousa Junior Multimidia</strong>, inscrita no CNPJ sob o nº <strong>24.699.815/0001-79</strong>, com sede na Rua Verbasco, 10, Letra A, Jorge Teixeira, Manaus - AM, CEP 69088-343, leva a sério a privacidade dos seus dados pessoais. Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e protegemos as informações fornecidas pelos usuários do nosso site e serviços.</p>
-            <h3>1. Dados Coletados</h3>
-            <p>Podemos coletar as seguintes informações quando você interage conosco:</p>
-            <ul>
-                <li><strong>Dados de contato:</strong> nome, número de WhatsApp/telefone e endereço de e-mail (quando fornecidos voluntariamente via formulário de contato ou conversa iniciada pelo usuário);</li>
-                <li><strong>Dados de navegação:</strong> endereço IP, tipo de navegador, páginas visitadas e duração da visita, coletados automaticamente para fins estatísticos e de segurança;</li>
-                <li><strong>Dados de interesse:</strong> informações sobre os serviços que você demonstrou interesse ao preencher nosso formulário.</li>
-            </ul>
-            <h3>2. Finalidade da Coleta</h3>
-            <p>Utilizamos os dados coletados para:</p>
-            <ul>
-                <li>Responder às solicitações de orçamento e contato;</li>
-                <li>Prestar os serviços contratados (instalação de fibra óptica, suporte técnico, orientação PGMEI);</li>
-                <li>Enviar comunicações relacionadas aos serviços solicitados;</li>
-                <li>Melhorar a experiência do usuário em nosso site;</li>
-                <li>Cumprir obrigações legais e regulatórias aplicáveis ao SCM.</li>
-            </ul>
-            <h3>3. Compartilhamento de Dados</h3>
-            <p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins de marketing. Os dados poderão ser compartilhados apenas nas seguintes hipóteses:</p>
-            <ul>
-                <li>Mediante ordem judicial ou requisição de autoridade competente;</li>
-                <li>Com prestadores de serviço essenciais à nossa operação (ex.: serviços de hospedagem do site), sempre mediante obrigações de confidencialidade;</li>
-                <li>Para proteção dos direitos e segurança da Jetspeed e de seus clientes.</li>
-            </ul>
-            <h3>4. Armazenamento e Segurança</h3>
-            <p>Os dados coletados são armazenados em ambiente seguro, com medidas técnicas e administrativas adequadas para protegê-los contra acessos não autorizados, perda, alteração ou destruição. Conservamos os dados apenas pelo período necessário às finalidades descritas ou conforme exigido por lei.</p>
-            <h3>5. Seus Direitos (LGPD)</h3>
-            <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:</p>
-            <ul>
-                <li>Confirmar a existência de tratamento de seus dados;</li>
-                <li>Acessar, corrigir ou solicitar a exclusão dos seus dados;</li>
-                <li>Revogar o consentimento dado anteriormente;</li>
-                <li>Solicitar a portabilidade dos dados.</li>
-            </ul>
-            <p>Para exercer esses direitos, entre em contato pelo WhatsApp (92) 99211-8426 ou pelo endereço da nossa sede.</p>
-            <h3>6. Cookies</h3>
-            <p>Nosso site pode utilizar cookies essenciais para seu funcionamento e cookies analíticos para entender como os visitantes interagem com as páginas. Você pode desabilitar os cookies nas configurações do seu navegador.</p>
-            <h3>7. Alterações nesta Política</h3>
-            <p>Esta Política de Privacidade pode ser atualizada periodicamente. Recomendamos a consulta regular a esta página. A data da última atualização está indicada no topo do documento.</p>
-            <h3>8. Contato do Encarregado</h3>
-            <p>Para questões relacionadas à privacidade e proteção de dados, entre em contato:</p>
-            <p>📱 WhatsApp: (92) 99211-8426<br>📍 Endereço: Rua Verbasco, 10, Letra A, Jorge Teixeira, Manaus - AM, CEP 69088-343</p>
-        </div>
-    </div>
-
-    <!-- ==================== TERMOS DE USO (OVERLAY) ==================== -->
-    <div class="legal-page" id="legalTermos">
-        <div class="legal-container">
-            <button class="legal-close" onclick="closeLegal('legalTermos')" aria-label="Fechar">✕</button>
-            <h2>Termos de Uso</h2>
-            <p class="legal-date">Última atualização: 26 de maio de 2026</p>
-            <p>Bem-vindo ao site da <strong>Jetspeed</strong>, razão social <strong>G C de Sousa Junior Multimidia</strong>, CNPJ <strong>24.699.815/0001-79</strong>. Ao acessar e utilizar este site, você concorda com os presentes Termos de Uso. Caso não concorde, recomendamos que não utilize nossas páginas.</p>
-            <h3>1. Objeto</h3>
-            <p>Este site tem por finalidade apresentar os serviços de comunicação multimídia (SCM) oferecidos pela Jetspeed, incluindo instalação de fibra óptica, planos de internet para MEI, orientação sobre PGMEI e serviços correlatos na região de Manaus - AM.</p>
-            <h3>2. Uso do Site</h3>
-            <p>O usuário se compromete a utilizar o site de forma lícita e ética, abstendo-se de:</p>
-            <ul>
-                <li>Enviar informações falsas ou enganosas pelos formulários de contato;</li>
-                <li>Tentar acessar áreas restritas ou sistemas internos sem autorização;</li>
-                <li>Utilizar o site para fins ilícitos ou que possam causar danos à Jetspeed ou a terceiros.</li>
-            </ul>
-            <h3>3. Conteúdo Informativo</h3>
-            <p>As informações contidas neste site têm caráter meramente informativo e não constituem oferta vinculante. Os preços, planos e disponibilidade de serviços devem ser confirmados diretamente com a Jetspeed pelos canais oficiais de atendimento. A Jetspeed se reserva o direito de alterar o conteúdo do site sem aviso prévio.</p>
-            <h3>4. Propriedade Intelectual</h3>
-            <p>Todo o conteúdo do site — incluindo textos, logotipos, imagens e design — é de propriedade da Jetspeed ou licenciado para seu uso. É proibida a reprodução, distribuição ou uso não autorizado de qualquer material sem consentimento prévio e por escrito.</p>
-            <h3>5. Links para Terceiros</h3>
-            <p>O site pode conter links para serviços de terceiros (como o WhatsApp). A Jetspeed não se responsabiliza pelo conteúdo, práticas de privacidade ou termos desses serviços externos. Recomendamos a leitura das políticas próprias de cada plataforma.</p>
-            <h3>6. Limitação de Responsabilidade</h3>
-            <p>A Jetspeed envidará esforços para manter o site disponível e com informações atualizadas, mas não garante disponibilidade ininterrupta ou ausência de erros. Não nos responsabilizamos por danos decorrentes do uso do site ou da impossibilidade de acesso, dentro dos limites permitidos pela legislação brasileira.</p>
-            <h3>7. Privacidade</h3>
-            <p>O tratamento de dados pessoais coletados pelo site é regido pela nossa <a href="#politica-privacidade" class="open-legal" data-legal="politica" style="color:var(--accent);">Política de Privacidade</a>, que integra estes Termos de Uso.</p>
-            <h3>8. Lei Aplicável e Foro</h3>
-            <p>Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da Comarca de Manaus - AM para dirimir quaisquer controvérsias decorrentes destes termos, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
-            <h3>9. Contato</h3>
-            <p>Para esclarecimentos sobre estes Termos de Uso:</p>
-            <p>📱 WhatsApp: (92) 99211-8426<br>📍 Endereço: Rua Verbasco, 10, Letra A, Jorge Teixeira, Manaus - AM, CEP 69088-343<br>📧 E-mail: através do formulário de contato em nosso site</p>
-        </div>
-    </div>
 
     <!-- ==================== SCRIPTS ==================== -->
     <script>
@@ -1488,8 +1324,7 @@
                 const faqItem = btn.parentElement;
                 const isOpen = faqItem.classList.contains('open');
                 // Close all
-                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove(
-                'open'));
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
                 // Open clicked (if wasn't open)
                 if (!isOpen) {
                     faqItem.classList.add('open');
@@ -1497,50 +1332,7 @@
             });
         });
 
-        // Legal pages (Privacy Policy & Terms of Use)
-        function openLegal(type) {
-            if (type === 'politica') {
-                document.getElementById('legalPolitica').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            } else if (type === 'termos') {
-                document.getElementById('legalTermos').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeLegal(id) {
-            document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Open legal pages from links
-        document.querySelectorAll('.open-legal').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const type = link.getAttribute('data-legal');
-                openLegal(type);
-            });
-        });
-
-        // Close legal page on overlay click
-        document.querySelectorAll('.legal-page').forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeLegal(this.id);
-                }
-            });
-        });
-
-        // Close legal page on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.legal-page.active').forEach(page => {
-                    closeLegal(page.id);
-                });
-            }
-        });
-
-        // Form submission handler
+        // Form submission handler (redireciona para WhatsApp)
         function handleFormSubmit(e) {
             e.preventDefault();
             const form = e.target;
@@ -1554,7 +1346,6 @@
                 return;
             }
 
-            // Build WhatsApp message
             let msg = `Olá! Meu nome é *${nome}*.%0A%0A`;
             if (interesse) msg += `Interesse: *${interesse}*%0A`;
             if (mensagem) msg += `Mensagem: ${mensagem}%0A`;
@@ -1562,11 +1353,8 @@
 
             const waUrl = `https://wa.me/5592992118426?text=${msg}`;
             window.open(waUrl, '_blank', 'noopener');
-
-            // Reset form
             form.reset();
 
-            // Show feedback
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = '✓ Redirecionando para o WhatsApp...';
@@ -1577,21 +1365,16 @@
             }, 3000);
         }
 
-        // Smooth scroll for anchor links with offset
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
-                if (href === '#politica-privacidade' || href === '#termos-uso') return; // handled
-                // separately
-                if (href === '#home' || href === '#sobre' || href === '#servicos' || href ===
-                    '#diferenciais' || href === '#como-funciona' || href === '#depoimentos' || href ===
-                    '#faq' || href === '#contato') {
+                if (href === '#home' || href === '#sobre' || href === '#servicos' || href === '#diferenciais' || href === '#como-funciona' || href === '#depoimentos' || href === '#faq' || href === '#contato') {
                     e.preventDefault();
                     const target = document.querySelector(href);
                     if (target) {
                         const offset = header.offsetHeight + 16;
-                        const top = target.getBoundingClientRect().top + window.pageYOffset -
-                            offset;
+                        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                         window.scrollTo({ top, behavior: 'smooth' });
                     }
                 }
